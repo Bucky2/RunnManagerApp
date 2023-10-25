@@ -14,14 +14,13 @@
         android:id="@+id/rlMain"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <RelativeLayout
             android:id="@+id/rlTopFixed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/transparent">
 
-            <!-- Datos actuales de la carrera-->
+            <!-- Datos actuales de carrera -->
             <LinearLayout
                 android:id="@+id/lyCurrentData"
                 android:layout_width="match_parent"
@@ -32,7 +31,6 @@
                 android:paddingTop="10dp"
                 android:background="@color/gray_medium"
                 android:gravity="center">
-
                 <RelativeLayout
                     android:id="@+id/rlCurrentDistance"
                     android:layout_width="120dp"
@@ -40,7 +38,6 @@
                     android:orientation="vertical"
                     android:layout_margin="5dp"
                     android:layout_gravity="center|right">
-
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cvCurrentDistance"
                         android:layout_width="120dp"
@@ -48,7 +45,26 @@
                         app:cardCornerRadius="60dp"
                         android:background="@color/white"
                         android:layout_margin="0dp">
-
+                        <me.tankery.lib.circularseekbar.CircularSeekBar
+                            android:id="@+id/csbChallengeDistance"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="0dp"
+                            android:translationY="0dp"
+                            android:translationZ="10dp"
+                            app:cs_circle_color="@color/transparent"
+                            app:cs_circle_progress_color="@color/blue_trans"
+                            app:cs_circle_stroke_width="8dp"
+                            app:cs_circle_style="butt"
+                            app:cs_disable_pointer="true"
+                            app:cs_end_angle="45"
+                            app:cs_max="100"
+                            app:cs_negative_enabled="true"
+                            app:cs_pointer_angle="0"
+                            app:cs_pointer_stroke_width="8dp"
+                            app:cs_progress="20"
+                            app:cs_start_angle="135" />
                         <me.tankery.lib.circularseekbar.CircularSeekBar
                             android:id="@+id/csbCurrentDistance"
                             android:layout_width="120dp"
@@ -56,20 +72,19 @@
                             android:layout_gravity="center_horizontal"
                             android:layout_margin="0dp"
                             android:translationY="0dp"
-                            android:translationZ="10dp"
-                            app:cs_negative_enabled="true"
-                            app:cs_circle_style="butt"
-                            app:cs_circle_stroke_width="8dp"
-                            app:cs_pointer_stroke_width="8dp"
-                            app:cs_pointer_angle="0"
-                            app:cs_start_angle="135"
-                            app:cs_end_angle="45"
-                            app:cs_progress="20"
-                            app:cs_max="100"
+                            android:translationZ="5dp"
                             app:cs_circle_color="@color/transparent"
-                            app:cs_circle_progress_color="@color/blue_trans"
-                            app:cs_disable_pointer="true"/>
-
+                            app:cs_circle_progress_color="@color/orange"
+                            app:cs_circle_stroke_width="8dp"
+                            app:cs_circle_style="butt"
+                            app:cs_disable_pointer="true"
+                            app:cs_end_angle="45"
+                            app:cs_max="100"
+                            app:cs_negative_enabled="true"
+                            app:cs_pointer_angle="0"
+                            app:cs_pointer_stroke_width="8dp"
+                            app:cs_progress="70"
+                            app:cs_start_angle="135" />
                         <me.tankery.lib.circularseekbar.CircularSeekBar
                             android:id="@+id/csbRecordDistance"
                             android:layout_width="120dp"
@@ -77,55 +92,50 @@
                             android:layout_gravity="center_horizontal"
                             android:layout_margin="0dp"
                             android:translationY="0dp"
-                            android:translationZ="5dp"
-                            app:cs_negative_enabled="true"
-                            app:cs_circle_style="butt"
-                            app:cs_circle_stroke_width="8dp"
-                            app:cs_pointer_stroke_width="8dp"
-                            app:cs_pointer_angle="0"
-                            app:cs_start_angle="135"
-                            app:cs_end_angle="45"
-                            app:cs_progress="100"
-                            app:cs_max="100"
+                            android:translationZ="0dp"
                             app:cs_circle_color="@color/transparent"
-                            app:cs_circle_progress_color="@color/orange"
-                            app:cs_disable_pointer="true"/>
+                            app:cs_circle_progress_color="@color/gray"
+                            app:cs_circle_stroke_width="8dp"
+                            app:cs_circle_style="butt"
+                            app:cs_disable_pointer="true"
+                            app:cs_end_angle="45"
+                            app:cs_max="100"
+                            app:cs_negative_enabled="true"
+                            app:cs_pointer_angle="0"
+                            app:cs_pointer_stroke_width="8dp"
+                            app:cs_progress="100"
+                            app:cs_start_angle="135" />
 
                         <TextView
-                            android:id="@+id/tvCurrentDistanceLabel"
+                            android:id="@+id/tvDistanceLabel"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="DISTANCIA"
+                            android:text="DISTANCE"
                             android:textAlignment="center"
                             android:textColor="@color/gray_medium"
                             android:textSize="10sp"
                             android:layout_marginTop="15dp"/>
-
                         <TextView
                             android:id="@+id/tvCurrentDistance"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
                             android:text="0.0"
                             android:textAlignment="center"
                             android:textColor="@color/gray_dark"
                             android:textSize="30sp"
                             android:layout_marginTop="30dp"/>
-
                         <TextView
-                            android:id="@+id/tvCurrentDistanceUX"
+                            android:id="@+id/tvDistanceUX"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="KMS"
+                            android:text="KMs."
                             android:textAlignment="center"
                             android:textColor="@color/gray_dark"
                             android:textSize="12sp"
                             android:layout_marginTop="70dp"/>
-
                         <TextView
-                            android:id="@+id/tvCurrentDistanceRecord"
+                            android:id="@+id/tvDistanceRecord"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="20.16"
@@ -134,9 +144,9 @@
                             android:layout_marginRight="26dp"
                             android:textSize="14sp"
                             android:layout_marginTop="93dp"/>
+
                     </androidx.cardview.widget.CardView>
                 </RelativeLayout>
-
                 <RelativeLayout
                     android:id="@+id/rlCurrentAvg"
                     android:layout_width="120dp"
@@ -144,7 +154,6 @@
                     android:orientation="vertical"
                     android:layout_margin="5dp"
                     android:layout_gravity="center|right">
-
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cvCurrentAVGSpeed"
                         android:layout_width="120dp"
@@ -152,47 +161,45 @@
                         app:cardCornerRadius="60dp"
                         android:background="@color/white"
                         android:layout_margin="0dp">
-
                         <me.tankery.lib.circularseekbar.CircularSeekBar
-                            android:id="@+id/csbChallengeAvgSpeed"
+                            android:id="@+id/csbCurrentAvgSpeed"
                             android:layout_width="120dp"
                             android:layout_height="120dp"
+                            android:translationY="0dp"
                             android:layout_gravity="center_horizontal"
                             android:layout_margin="0dp"
-                            android:translationY="0dp"
                             android:translationZ="10dp"
                             app:cs_negative_enabled="true"
                             app:cs_circle_style="butt"
                             app:cs_circle_stroke_width="8dp"
                             app:cs_pointer_stroke_width="8dp"
                             app:cs_pointer_angle="0"
-                            app:cs_start_angle="135"
-                            app:cs_end_angle="45"
-                            app:cs_progress="20"
-                            app:cs_max="100"
-                            app:cs_circle_color="@color/transparent"
-                            app:cs_circle_progress_color="@color/orange"
+                            app:cs_start_angle = "135"
+                            app:cs_end_angle = "45"
+                            app:cs_progress = "20"
+                            app:cs_max = "100"
+                            app:cs_circle_color  = "@color/transparent"
+                            app:cs_circle_progress_color = "@color/orange"
                             app:cs_disable_pointer="true"/>
-
                         <me.tankery.lib.circularseekbar.CircularSeekBar
                             android:id="@+id/csbRecordAvgSpeed"
                             android:layout_width="120dp"
                             android:layout_height="120dp"
+                            android:translationY="0dp"
                             android:layout_gravity="center_horizontal"
                             android:layout_margin="0dp"
-                            android:translationY="0dp"
                             android:translationZ="5dp"
                             app:cs_negative_enabled="true"
                             app:cs_circle_style="butt"
                             app:cs_circle_stroke_width="8dp"
                             app:cs_pointer_stroke_width="8dp"
                             app:cs_pointer_angle="0"
-                            app:cs_start_angle="135"
-                            app:cs_end_angle="45"
-                            app:cs_progress="100"
-                            app:cs_max="100"
-                            app:cs_circle_color="@color/transparent"
-                            app:cs_circle_progress_color="@color/gray"
+                            app:cs_start_angle = "135"
+                            app:cs_end_angle = "45"
+                            app:cs_progress = "100"
+                            app:cs_max = "100"
+                            app:cs_circle_color  = "@color/transparent"
+                            app:cs_circle_progress_color = "@color/gray"
                             app:cs_disable_pointer="true"/>
 
                         <TextView
@@ -200,34 +207,29 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="AVG VEL"
+                            android:text="AVG SPEED"
                             android:textAlignment="center"
                             android:textColor="@color/gray_medium"
                             android:textSize="10sp"
                             android:layout_marginTop="15dp"/>
-
                         <TextView
                             android:id="@+id/tvCurrentAvgSpeed"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
                             android:text="0.0"
                             android:textAlignment="center"
                             android:textColor="@color/gray_dark"
                             android:textSize="30sp"
                             android:layout_marginTop="30dp"/>
-
                         <TextView
                             android:id="@+id/tvCurrentAvgSpeedUX"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
                             android:text="KM/H"
                             android:textAlignment="center"
                             android:textColor="@color/gray_dark"
                             android:textSize="12sp"
                             android:layout_marginTop="70dp"/>
-
                         <TextView
                             android:id="@+id/tvAvgSpeedRecord"
                             android:layout_width="match_parent"
@@ -240,7 +242,6 @@
                             android:layout_marginTop="93dp"/>
                     </androidx.cardview.widget.CardView>
                 </RelativeLayout>
-
                 <RelativeLayout
                     android:id="@+id/rlCurrentSpeed"
                     android:layout_width="120dp"
@@ -256,105 +257,97 @@
                         app:cardCornerRadius="60dp"
                         android:background="@color/white"
                         android:layout_margin="0dp">
-
                         <me.tankery.lib.circularseekbar.CircularSeekBar
                             android:id="@+id/csbCurrentSpeed"
                             android:layout_width="120dp"
                             android:layout_height="120dp"
+                            android:translationY="0dp"
                             android:layout_gravity="center_horizontal"
                             android:layout_margin="0dp"
-                            android:translationY="0dp"
                             android:translationZ="15dp"
                             app:cs_negative_enabled="true"
                             app:cs_circle_style="butt"
                             app:cs_circle_stroke_width="8dp"
                             app:cs_pointer_stroke_width="8dp"
                             app:cs_pointer_angle="0"
-                            app:cs_start_angle="135"
-                            app:cs_end_angle="45"
-                            app:cs_progress="20"
-                            app:cs_max="100"
-                            app:cs_circle_color="@color/transparent"
-                            app:cs_circle_progress_color="@color/orange"
+                            app:cs_start_angle = "135"
+                            app:cs_end_angle = "45"
+                            app:cs_progress = "20"
+                            app:cs_max = "100"
+                            app:cs_circle_color  = "@color/transparent"
+                            app:cs_circle_progress_color = "@color/orange"
                             app:cs_disable_pointer="true"/>
-
                         <me.tankery.lib.circularseekbar.CircularSeekBar
                             android:id="@+id/csbCurrentMaxSpeed"
                             android:layout_width="120dp"
                             android:layout_height="120dp"
+                            android:translationY="0dp"
                             android:layout_gravity="center_horizontal"
                             android:layout_margin="0dp"
-                            android:translationY="0dp"
                             android:translationZ="10dp"
                             app:cs_negative_enabled="true"
                             app:cs_circle_style="butt"
                             app:cs_circle_stroke_width="8dp"
                             app:cs_pointer_stroke_width="8dp"
                             app:cs_pointer_angle="0"
-                            app:cs_start_angle="135"
-                            app:cs_end_angle="45"
-                            app:cs_progress="70"
-                            app:cs_max="100"
-                            app:cs_circle_color="@color/transparent"
-                            app:cs_circle_progress_color="@color/salmon_dark"
+                            app:cs_start_angle = "135"
+                            app:cs_end_angle = "45"
+                            app:cs_progress = "70"
+                            app:cs_max = "100"
+                            app:cs_circle_color  = "@color/transparent"
+                            app:cs_circle_progress_color = "@color/salmon_dark"
                             app:cs_disable_pointer="true"/>
-
                         <me.tankery.lib.circularseekbar.CircularSeekBar
                             android:id="@+id/csbRecordSpeed"
                             android:layout_width="120dp"
                             android:layout_height="120dp"
+                            android:translationY="0dp"
                             android:layout_gravity="center_horizontal"
                             android:layout_margin="0dp"
-                            android:translationY="0dp"
                             android:translationZ="5dp"
                             app:cs_negative_enabled="true"
                             app:cs_circle_style="butt"
                             app:cs_circle_stroke_width="8dp"
                             app:cs_pointer_stroke_width="8dp"
                             app:cs_pointer_angle="0"
-                            app:cs_start_angle="135"
-                            app:cs_end_angle="45"
-                            app:cs_progress="100"
-                            app:cs_max="100"
-                            app:cs_circle_color="@color/transparent"
-                            app:cs_circle_progress_color="@color/gray"
+                            app:cs_start_angle = "135"
+                            app:cs_end_angle = "45"
+                            app:cs_progress = "100"
+                            app:cs_max = "100"
+                            app:cs_circle_color  = "@color/transparent"
+                            app:cs_circle_progress_color = "@color/gray"
                             app:cs_disable_pointer="true"/>
 
                         <TextView
-                            android:id="@+id/tvCurrentSpeedLabel"
+                            android:id="@+id/tvSpeedLabel"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="VELOCIDAD"
+                            android:text="SPEED"
                             android:textAlignment="center"
                             android:textColor="@color/gray_medium"
                             android:textSize="10sp"
                             android:layout_marginTop="15dp"/>
-
                         <TextView
                             android:id="@+id/tvCurrentSpeed"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
                             android:text="0.0"
                             android:textAlignment="center"
                             android:textColor="@color/gray_dark"
                             android:textSize="30sp"
                             android:layout_marginTop="30dp"/>
-
                         <TextView
-                            android:id="@+id/tvCurrentSpeedUX"
+                            android:id="@+id/tvSpeedUX"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
                             android:text="KM/H"
                             android:textAlignment="center"
                             android:textColor="@color/gray_dark"
                             android:textSize="12sp"
                             android:layout_marginTop="70dp"/>
-
                         <TextView
-                            android:id="@+id/tvCurrentSpeedRecord"
+                            android:id="@+id/tvMaxSpeedRecord"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="16.3"
@@ -363,11 +356,12 @@
                             android:layout_marginRight="26dp"
                             android:textSize="14sp"
                             android:layout_marginTop="93dp"/>
+
                     </androidx.cardview.widget.CardView>
                 </RelativeLayout>
             </LinearLayout>
 
-            <!--Apartado que siempre estara visible para el usuario-->
+            <!-- Chrono y Rounds con los "progressbar" simulados con linearlayouts -->
             <RelativeLayout
                 android:id="@+id/lyChrono"
                 android:layout_width="match_parent"
@@ -383,7 +377,6 @@
                     android:layout_height="77dp"
                     android:orientation="horizontal"
                     android:background="@color/orange"/>
-                
                 <LinearLayout
                     android:id="@+id/lyRoundProgressBg"
                     android:layout_width="match_parent"
@@ -399,13 +392,12 @@
                     android:layout_height="77dp"
                     android:gravity="center"
                     android:orientation="horizontal">
-
                     <TextView
                         android:id="@+id/tvChrono"
                         android:layout_width="210dp"
                         android:layout_height="77dp"
                         android:gravity="center"
-                        android:text="@string/init_stop_match_value"
+                        android:text="@string/init_stop_watch_value"
                         android:textColor="@color/white"
                         android:textSize="50sp"
                         android:textStyle="bold"/>
@@ -419,16 +411,16 @@
                         android:textColor="@color/gray_dark"
                         android:textSize="24sp"/>
                 </LinearLayout>
+
             </RelativeLayout>
 
-
         </RelativeLayout>
+
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="287dp"
-            tools:ignore="SpeakableTextPresentCheck">
+            android:layout_marginTop="287dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -438,7 +430,7 @@
                 android:paddingBottom="60dp"
                 android:gravity="center">
 
-                <!--IMPLEMENTACIÓN DEL MAPA-->
+                <!-- Map -->
                 <LinearLayout
                     android:id="@+id/lyMapContainer"
                     android:layout_width="match_parent"
@@ -447,7 +439,6 @@
                     android:translationY="0dp"
                     android:background="@color/transparent"
                     android:orientation="vertical">
-
                     <LinearLayout
                         android:id="@+id/lyMap"
                         android:layout_width="match_parent"
@@ -464,20 +455,21 @@
                             android:gravity="left"
                             android:orientation="vertical">
                             <!--
-                                    <fragment
-                                        android:id="@+id/fragmentMap"
-                                        android:name="com.google.android.gms.maps.SupportMapFragment"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="420dp"
-                                        tools:context=".MainActivity"
-                                        map:mapType="normal"
-                                        map:uiCompass="false"
-                                        map:uiRotateGestures="true"
-                                        map:uiScrollGestures="true"
-                                        map:uiTiltGestures="true"
-                                        map:uiZoomControls="true"
-                                        map:uiZoomGestures="true"/>
-                                       -->
+                            <fragment
+                                android:id="@+id/fragmentMap"
+                                android:name="com.google.android.gms.maps.SupportMapFragment"
+                                android:layout_width="match_parent"
+                                android:layout_height="420dp"
+                                tools:context=".MainActivity"
+                                map:mapType="normal"
+                                map:uiCompass="false"
+                                map:uiRotateGestures="true"
+                                map:uiScrollGestures="true"
+                                map:uiTiltGestures="true"
+                                map:uiZoomControls="true"
+                                map:uiZoomGestures="true"/>
+                            -->
+
                             <TextView
                                 android:id="@+id/tvMapCenter"
                                 android:layout_width="wrap_content"
@@ -496,8 +488,6 @@
                                 android:background="@color/blue"
                                 android:textColor="@color/white"
                                 android:onClick="callCenterMap"/>
-
-
                             <ImageView
                                 android:id="@+id/ivTypeMap"
                                 android:layout_width="55dp"
@@ -508,7 +498,6 @@
                                 android:src="@drawable/map_type_normal"
                                 android:translationZ="10dp"
                                 android:onClick="changeTypeMap"/>
-
                         </LinearLayout>
 
                     </LinearLayout>
@@ -525,31 +514,33 @@
                             android:layout_width="match_parent"
                             android:layout_height="5dp"
                             android:background="@color/white"
-                            android:orientation="vertical">
+                            android:orientation="vertical" >
                         </LinearLayout>
+
                         <LinearLayout
                             android:id="@+id/lyOpenerButton"
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
-                            android:translationY="-5dp"
+                            android:onClick="callShowHideMap"
                             android:orientation="horizontal"
-                            android:onClick="callShowHideMap">
+                            android:translationY="-5dp"
+                            tools:ignore="TouchTargetSizeCheck">
 
                             <LinearLayout
                                 android:id="@+id/lyOpenStart"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
-                                android:translationY="-30dp"
                                 android:layout_marginLeft="6dp"
-                                android:rotation="45"
                                 android:background="@color/white"
-                                android:orientation="vertical"/>
+                                android:orientation="vertical"
+                                android:rotation="45"
+                                android:translationY="-30dp" />
 
                             <LinearLayout
                                 android:id="@+id/lyOpenerTitle"
                                 android:layout_width="wrap_content"
-                                android:layout_marginLeft="-25dp"
                                 android:layout_height="22dp"
+                                android:layout_marginLeft="-25dp"
                                 android:background="@color/white"
                                 android:orientation="horizontal"
                                 android:translationZ="15dp">
@@ -559,48 +550,45 @@
                                     android:layout_width="12dp"
                                     android:layout_height="15dp"
                                     android:layout_marginTop="2dp"
-                                    android:src="@drawable/map_icon"/>
+                                    android:src="@drawable/map_icon" />
 
                                 <TextView
                                     android:id="@+id/tvMapTitle"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
                                     android:gravity="center"
                                     android:text="MAPA"
-                                    android:layout_marginLeft="5dp"
                                     android:textAlignment="center"
                                     android:textColor="@color/gray_dark"
-                                    android:textSize="14sp"/>
+                                    android:textSize="14sp" />
 
                                 <ImageView
                                     android:id="@+id/ivOpenClose"
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
                                     android:layout_marginLeft="10dp"
-                                    android:src="@drawable/opener_icon_dark"
-                                    android:rotation="0" />
-
+                                    android:rotation="0"
+                                    android:src="@drawable/opener_icon_dark" />
                             </LinearLayout>
 
                             <LinearLayout
                                 android:id="@+id/lyOpenEnd"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
-                                android:translationY="-30dp"
                                 android:layout_marginLeft="-30dp"
-                                android:rotation="45"
                                 android:background="@color/white"
                                 android:orientation="vertical"
-                                android:translationZ="0dp"/>
+                                android:rotation="45"
+                                android:translationY="-30dp"
+                                android:translationZ="0dp" />
 
                         </LinearLayout>
 
                     </LinearLayout>
-
-
                 </LinearLayout>
 
-                <!--Start, Camara, Sports, Map-->
+                <!-- Start, Camara, Sports, Map -->
                 <LinearLayout
                     android:id="@+id/rlStart"
                     android:layout_width="match_parent"
@@ -614,7 +602,7 @@
                     android:orientation="vertical"
                     android:background="@color/gray_dark">
 
-                    <!--Boton de Start y Camara-->
+                    <!-- Boton de Start y Camara -->
                     <RelativeLayout
                         android:id="@+id/rlStartCamara"
                         android:layout_gravity="center"
@@ -644,7 +632,7 @@
                                 android:textColor="@color/white"
                                 android:textSize="30sp"
                                 android:textStyle="bold"
-                                android:translationY="-5dp"/>
+                                android:translationY="-5dp" />
                         </LinearLayout>
                         <com.google.android.material.floatingactionbutton.FloatingActionButton
                             android:id="@+id/fbCamera"
@@ -652,7 +640,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_centerInParent="true"
-                            app:backgroundTint="@color/white"
+                            android:backgroundTint="@color/white"
                             android:src="@android:drawable/ic_menu_camera"
                             app:maxImageSize="40dp"
                             android:translationZ="12dp"
@@ -660,7 +648,7 @@
                             android:onClick="takePicture"/>
                     </RelativeLayout>
 
-                    <!--Sports-->
+                    <!-- Sports -->
                     <LinearLayout
                         android:id="@+id/lySports"
                         android:layout_width="match_parent"
@@ -670,7 +658,7 @@
                         android:background="@color/gray_dark"
                         android:gravity="center">
                         <LinearLayout
-                            android:id="@+id/lySportsBike"
+                            android:id="@+id/lySportBike"
                             android:layout_weight="0.3"
                             android:layout_width="0dp"
                             android:layout_height="90dp"
@@ -686,16 +674,15 @@
                                 android:layout_height="match_parent"
                                 android:src="@mipmap/bike"/>
                         </LinearLayout>
-
                         <LinearLayout
-                            android:id="@+id/lySportsRollerSkate"
-                            android:layout_weight="0.3"
+                            android:id="@+id/lySportRollerSkate"
                             android:layout_width="0dp"
+                            android:layout_weight="0.3"
                             android:layout_height="90dp"
                             android:orientation="vertical"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginLeft="5dp"
                             android:onClick="selectRollerSkate"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
                             android:background="@color/gray_medium"
                             android:gravity="center">
                             <ImageView
@@ -706,11 +693,10 @@
                                 android:layout_height="match_parent"
                                 android:src="@mipmap/rollerskate"/>
                         </LinearLayout>
-
                         <LinearLayout
-                            android:id="@+id/lySportsRunning"
-                            android:layout_weight="0.3"
+                            android:id="@+id/lySportRunning"
                             android:layout_width="0dp"
+                            android:layout_weight="0.3"
                             android:layout_height="90dp"
                             android:orientation="vertical"
                             android:onClick="selectRunning"
@@ -724,7 +710,6 @@
                                 android:layout_height="match_parent"
                                 android:src="@mipmap/running"/>
                         </LinearLayout>
-
                     </LinearLayout>
 
                     <!-- Configuarcion de la carrera (deporte y ajustes) -->
@@ -737,136 +722,6 @@
                         android:layout_height="wrap_content"
                         android:background="@color/gray_dark">
 
-                        <LinearLayout
-                            android:id="@+id/lyIntervalMode"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="20dp"
-                            android:background="@color/gray_dark"
-                            android:gravity="left"
-                            android:orientation="horizontal"
-                            android:padding="16dp"
-                            android:translationY="-0dp"
-                            android:translationZ="-10dp">
-
-                            <LinearLayout
-                                android:id="@+id/lyIntervalDuration"
-                                android:layout_width="wrap_content"
-                                android:layout_height="140dp"
-                                android:layout_marginLeft="10dp"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:id="@+id/tvIntervalDuration"
-                                    android:layout_width="150dp"
-                                    android:layout_height="wrap_content"
-                                    android:text="DURACIÓN DE LOS INTERVALOS"
-                                    android:textColor="@color/white" />
-
-                                <LinearLayout
-                                    android:id="@+id/lyIntervalDurationNP"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="50dp"
-                                    android:layout_marginTop="30dp"
-                                    android:gravity="bottom"
-                                    android:orientation="horizontal">
-
-                                    <NumberPicker
-                                        android:id="@+id/npDurationInterval"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="120dp"
-                                        android:padding="0dp"
-                                        android:theme="@style/NumberPickerTheme"
-                                        android:translationY="44dp" />
-
-                                    <TextView
-                                        android:id="@+id/tvIntervalDurationUX"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="MIN."
-                                        android:textColor="@color/white" />
-                                </LinearLayout>
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:id="@+id/lyRunningWalking"
-                                android:layout_width="wrap_content"
-                                android:layout_height="140dp"
-                                android:gravity="bottom"
-                                android:orientation="vertical">
-
-                                <LinearLayout
-                                    android:id="@+id/lyRunningWalkingTimes"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="bottom"
-                                    android:orientation="horizontal"
-                                    android:translationY="134dp">
-
-                                    <TextView
-                                        android:id="@+id/tvRunningTime"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="02:30"
-                                        android:textColor="@color/white"
-                                        android:textSize="20dp" />
-
-                                    <TextView
-                                        android:id="@+id/tvRunningTimeUX"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="RUN"
-                                        android:textColor="@color/white"
-                                        android:textSize="12dp" />
-
-                                    <TextView
-                                        android:id="@+id/tvWalkingTimeDiv"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text=" / "
-                                        android:textColor="@color/white"
-                                        android:textSize="20dp" />
-
-                                    <TextView
-                                        android:id="@+id/tvWalkingTime"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="02:30"
-                                        android:textColor="@color/white"
-                                        android:textSize="20dp" />
-
-                                    <TextView
-                                        android:id="@+id/tvWalkingTimeux"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="WALK"
-                                        android:textColor="@color/white"
-                                        android:textSize="12dp" />
-                                </LinearLayout>
-
-                                <me.tankery.lib.circularseekbar.CircularSeekBar
-                                    android:id="@+id/csbRunWalk"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="160dp"
-                                    android:layout_gravity="center_horizontal"
-                                    android:layout_marginTop="0dp"
-                                    android:focusable="false"
-                                    android:focusedByDefault="false"
-                                    android:translationY="20dp"
-                                    app:cs_circle_stroke_width="8dp"
-                                    app:cs_circle_style="round"
-                                    app:cs_disable_pointer="false"
-                                    app:cs_end_angle="0"
-                                    app:cs_maintain_equal_circle="false"
-                                    app:cs_max="100"
-                                    app:cs_negative_enabled="false"
-                                    app:cs_pointer_halo_border_width="0dp"
-                                    app:cs_pointer_halo_width="@dimen/seekbar_holo_width"
-                                    app:cs_pointer_stroke_width="24dp"
-                                    app:cs_progress="50"
-                                    app:cs_start_angle="-180" />
-                            </LinearLayout>
-                        </LinearLayout>
 
                         <Switch
                             android:id="@+id/swIntervalMode"
@@ -885,7 +740,6 @@
                             android:background="@color/gray_dark"
                             android:onClick="inflateIntervalMode"
                             tools:ignore="UseSwitchCompatOrMaterialXml" />
-
                         <LinearLayout
                             android:id="@+id/lyIntervalModeSpace"
                             android:orientation="horizontal"
@@ -894,6 +748,164 @@
                             android:background="@color/gray_dark">
                             <!--
                                                 android:translationY="-200dp" -->
+                            <LinearLayout
+                                android:id="@+id/lyIntervalMode"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/gray_dark"
+                                android:padding="16dp"
+                                android:layout_marginTop="20dp"
+                                android:gravity="left"
+                                android:translationY="-0dp"
+                                android:translationZ="-10dp">
+                                <LinearLayout
+                                    android:id="@+id/lyIntervalDuration"
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="140dp"
+                                    android:layout_marginLeft="10dp">
+
+                                    <TextView
+                                        android:id="@+id/tvIntervalDuration"
+                                        android:layout_width="150dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="DURACIÓN DE LOS INTERVALOS"
+                                        android:textColor="@color/white"/>
+                                    <LinearLayout
+                                        android:id="@+id/lyIntervalDurationNP"
+                                        android:orientation="horizontal"
+                                        android:gravity="bottom"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="50dp"
+                                        android:layout_marginTop="30dp">
+
+                                        <NumberPicker
+                                            android:id="@+id/npDurationInterval"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="120dp"
+                                            android:padding="0dp"
+                                            android:translationY="44dp"
+                                            android:theme="@style/NumberPickerTheme"/>
+
+                                        <TextView
+                                            android:id="@+id/tvIntervalDurationUX"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="MIN."
+                                            android:textColor="@color/white"/>
+
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:id="@+id/lyRunningWalking"
+                                    android:orientation="vertical"
+                                    android:gravity="bottom"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="140dp">
+
+                                    <LinearLayout
+                                        android:id="@+id/lyRunningWalkingTimes"
+                                        android:orientation="horizontal"
+                                        android:gravity="bottom"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:translationY="134dp">
+
+                                        <TextView
+                                            android:id="@+id/tvRunningTime"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="02:30"
+                                            android:textSize="20dp"
+                                            android:textColor="@color/white"/>
+
+                                        <TextView
+                                            android:id="@+id/tvRunningTimeUX"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="RUN"
+                                            android:textSize="12dp"
+                                            android:textColor="@color/white"/>
+                                        <TextView
+                                            android:id="@+id/tvWalkingTimeDiv"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text=" / "
+                                            android:textSize="20dp"
+                                            android:textColor="@color/white"/>
+                                        <TextView
+                                            android:id="@+id/tvWalkingTime"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="02:30"
+                                            android:textSize="20dp"
+                                            android:textColor="@color/white"/>
+                                        <TextView
+                                            android:id="@+id/tvWalkingTimeux"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="WALK"
+                                            android:textSize="12dp"
+                                            android:textColor="@color/white"/>
+                                    </LinearLayout>
+
+                                    <me.tankery.lib.circularseekbar.CircularSeekBar
+                                        android:id="@+id/csbRunWalk"
+                                        android:focusable="false"
+                                        android:focusedByDefault="false"
+                                        android:layout_width="match_parent"
+                                        android:layout_marginTop="0dp"
+                                        android:layout_height="160dp"
+                                        android:layout_gravity="center_horizontal"
+                                        app:cs_circle_stroke_width="8dp"
+                                        app:cs_circle_style="round"
+                                        app:cs_disable_pointer="false"
+                                        app:cs_end_angle="0"
+                                        app:cs_maintain_equal_circle="false"
+                                        app:cs_max="100"
+                                        app:cs_negative_enabled="false"
+                                        app:cs_pointer_halo_width="@dimen/seekbar_holo_width"
+                                        app:cs_pointer_stroke_width="24dp"
+                                        app:cs_pointer_halo_border_width = "0dp"
+                                        android:translationY="20dp"
+                                        app:cs_progress="50"
+                                        app:cs_start_angle="-180" />
+                                    <!--
+                                    CircularSeekBar support following attributes:
+
+                                    app:cs_circle_style = "butt|round|square"
+                                    app:cs_progress = "integer"
+                                    app:cs_max = "integer"
+                                    app:cs_negative_enabled = "boolean"
+                                    app:cs_move_outside_circle = "boolean"
+                                    app:cs_maintain_equal_circle = "boolean"
+                                    app:cs_use_custom_radii = "boolean"
+                                    app:cs_lock_enabled = "boolean"
+                                    app:cs_circle_x_radius = "dimension"
+                                    app:cs_circle_y_radius = "dimension"
+                                    app:cs_circle_stroke_width = "dimension"
+                                    app:cs_disable_pointer = "boolean"
+                                    app:cs_pointer_stroke_width = "dimension"
+                                    app:cs_pointer_halo_width = "dimension"
+                                    app:cs_pointer_halo_border_width = "dimension"
+                                    app:cs_circle_fill = "color"
+                                    app:cs_circle_color = "color"
+                                    app:cs_circle_progress_color = "color"
+                                    app:cs_pointer_color = "color"
+                                    app:cs_pointer_halo_color = "color"
+                                    app:cs_pointer_halo_color_ontouch = "color"
+                                    app:cs_pointer_alpha_ontouch = "integer"
+                                    app:cs_pointer_angle = "float"
+                                    app:cs_start_angle = "float"
+                                    app:cs_end_angle = "float"
+                                    app:cs_disable_progress_glow = "boolean"
+                                    app:cs_hide_progress_when_empty = "boolean"
+
+                                    -->
+
+                                </LinearLayout>
+                            </LinearLayout>
                         </LinearLayout>
 
                         <Switch
@@ -914,7 +926,6 @@
                             android:background="@color/gray_dark"
                             android:onClick="inflateChallenges"
                             tools:ignore="UseSwitchCompatOrMaterialXml" />
-
                         <LinearLayout
                             android:id="@+id/lyChallengesSpace"
                             android:orientation="vertical"
@@ -922,7 +933,6 @@
                             android:layout_height="300dp"
                             android:padding="10dp">
                             <!-- translationY = "-300dp" -->
-
                             <LinearLayout
                                 android:id="@+id/lyChallenges"
                                 android:orientation="vertical"
@@ -963,7 +973,6 @@
                                         android:background="@color/gray_medium"
                                         android:onClick="showDistance"/>
                                 </LinearLayout>
-
                                 <RelativeLayout
                                     android:id="@+id/rlChallengeOptions"
                                     android:layout_width="match_parent"
@@ -977,69 +986,67 @@
                                         android:background="@color/gray_dark"
                                         android:translationZ="5dp">
                                         <LinearLayout
-                                        android:id="@+id/lyChallengeDurationNPs"
-                                        android:orientation="horizontal"
-                                        android:layout_gravity="top"
-                                        android:gravity="center"
-                                        android:layout_width="match_parent"
-                                        android:background="@color/gray_dark"
-                                        android:layout_height="50dp"
-                                        android:layout_marginTop="30dp">
-                                        <NumberPicker
-                                            android:id="@+id/npChallengeDurationHH"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="120dp"
-                                            android:padding="0dp"
-                                            android:translationY="-10dp"
-                                            android:theme="@style/NumberPickerTheme"/>
-
-                                        <TextView
-                                            android:id="@+id/tvChallengeDurationHHMM"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_gravity="center"
-                                            android:textAlignment="center"
-                                            android:translationY="-10dp"
-                                            android:text=":"
-                                            android:textSize="20dp"
-                                            android:textColor="@color/white"/>
-                                        <NumberPicker
-                                            android:id="@+id/npChallengeDurationMM"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="120dp"
-                                            android:translationY="-10dp"
-                                            android:padding="0dp"
-                                            android:theme="@style/NumberPickerTheme"/>
-                                        <TextView
-                                            android:id="@+id/tvChallengeDurationMMSS"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_gravity="center"
-                                            android:textAlignment="center"
-                                            android:translationY="-10dp"
-                                            android:text=":"
-                                            android:textSize="20dp"
-                                            android:textColor="@color/white"/>
-                                        <NumberPicker
-                                            android:id="@+id/npChallengeDurationSS"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="120dp"
-                                            android:translationY="-10dp"
-                                            android:padding="0dp"
-                                            android:theme="@style/NumberPickerTheme"/>
-                                        <TextView
-                                            android:id="@+id/tvChallengeDurationUX"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_gravity="center"
-                                            android:textAlignment="center"
-                                            android:translationY="-10dp"
-                                            android:text="HH:MM:SS"
-                                            android:textSize="20dp"
-                                            android:textColor="@color/white"/>
+                                            android:id="@+id/lyChallengeDurationNPs"
+                                            android:orientation="horizontal"
+                                            android:layout_gravity="top"
+                                            android:gravity="center"
+                                            android:layout_width="match_parent"
+                                            android:background="@color/gray_dark"
+                                            android:layout_height="50dp"
+                                            android:layout_marginTop="30dp">
+                                            <NumberPicker
+                                                android:id="@+id/npChallengeDurationHH"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="120dp"
+                                                android:padding="0dp"
+                                                android:translationY="-10dp"
+                                                android:theme="@style/NumberPickerTheme"/>
+                                            <TextView
+                                                android:id="@+id/tvChallengeDurationHHMM"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:textAlignment="center"
+                                                android:translationY="-10dp"
+                                                android:text=":"
+                                                android:textSize="20dp"
+                                                android:textColor="@color/white"/>
+                                            <NumberPicker
+                                                android:id="@+id/npChallengeDurationMM"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="120dp"
+                                                android:translationY="-10dp"
+                                                android:padding="0dp"
+                                                android:theme="@style/NumberPickerTheme"/>
+                                            <TextView
+                                                android:id="@+id/tvChallengeDurationMMSS"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:textAlignment="center"
+                                                android:translationY="-10dp"
+                                                android:text=":"
+                                                android:textSize="20dp"
+                                                android:textColor="@color/white"/>
+                                            <NumberPicker
+                                                android:id="@+id/npChallengeDurationSS"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="120dp"
+                                                android:translationY="-10dp"
+                                                android:padding="0dp"
+                                                android:theme="@style/NumberPickerTheme"/>
+                                            <TextView
+                                                android:id="@+id/tvChallengeDurationUX"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:textAlignment="center"
+                                                android:translationY="-10dp"
+                                                android:text="HH:MM:SS"
+                                                android:textSize="20dp"
+                                                android:textColor="@color/white"/>
                                         </LinearLayout>
                                     </LinearLayout>
-
                                     <LinearLayout
                                         android:id="@+id/lyChallengeDistance"
                                         android:orientation="horizontal"
@@ -1048,41 +1055,38 @@
                                         android:background="@color/gray_dark"
                                         android:layout_height="80dp"
                                         android:translationZ="0dp">
+                                        <LinearLayout
+                                            android:id="@+id/lyChallengeDistanceNPs"
+                                            android:orientation="horizontal"
+                                            android:layout_gravity="top"
+                                            android:gravity="center"
+                                            android:layout_width="match_parent"
+                                            android:background="@color/gray_dark"
+                                            android:layout_height="50dp"
+                                            android:layout_marginTop="30dp">
+                                            <NumberPicker
+                                                android:id="@+id/npChallengeDistance"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="120dp"
+                                                android:textAlignment="textEnd"
+                                                android:padding="0dp"
+                                                android:translationY="-10dp"
+                                                android:theme="@style/NumberPickerTheme"/>
+                                            <TextView
+                                                android:id="@+id/tvChallengeDistanceUX"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:textAlignment="center"
+                                                android:layout_marginLeft="10dp"
+                                                android:text="KM"
+                                                android:translationY="-10dp"
+                                                android:textSize="20dp"
+                                                android:textColor="@color/white"/>
+                                        </LinearLayout>
 
-                                    <LinearLayout
-                                        android:id="@+id/lyChallengeDistanceNPs"
-                                        android:orientation="horizontal"
-                                        android:layout_gravity="top"
-                                        android:gravity="center"
-                                        android:layout_width="match_parent"
-                                        android:background="@color/gray_dark"
-                                        android:layout_height="50dp"
-                                        android:layout_marginTop="30dp">
-
-                                        <NumberPicker
-                                            android:id="@+id/npChallengeDistance"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="120dp"
-                                            android:textAlignment="textEnd"
-                                            android:padding="0dp"
-                                            android:translationY="-10dp"
-                                            android:theme="@style/NumberPickerTheme"/>
-                                        <TextView
-                                            android:id="@+id/tvChallengeDistanceUX"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_gravity="center"
-                                            android:textAlignment="center"
-                                            android:layout_marginLeft="10dp"
-                                            android:text="KM"
-                                            android:translationY="-10dp"
-                                            android:textSize="20dp"
-                                            android:textColor="@color/white"/>
                                     </LinearLayout>
-                                    </LinearLayout>
-
                                 </RelativeLayout>
-
                                 <LinearLayout
                                     android:id="@+id/lyChallengesSettings"
                                     android:orientation="vertical"
@@ -1090,7 +1094,6 @@
                                     android:layout_height="100dp"
                                     android:paddingBottom="20dp"
                                     android:layout_marginTop="20dp">
-
                                     <CheckBox
                                         android:id="@+id/cbNotify"
                                         android:layout_width="wrap_content"
@@ -1102,7 +1105,6 @@
                                         android:buttonTint="@color/white"
                                         android:drawableTint="@color/orange"
                                         android:text="Notificar Objetivo Alcanzado" />
-
                                     <CheckBox
                                         android:id="@+id/cbAutoFinish"
                                         android:layout_width="wrap_content"
@@ -1114,7 +1116,6 @@
                                         android:buttonTint="@color/white"
                                         android:drawableTint="@color/orange"
                                         android:text="Fin de carrera automático" />
-
                                 </LinearLayout>
                             </LinearLayout>
                         </LinearLayout>
@@ -1137,7 +1138,6 @@
                             android:background="@color/gray_dark"
                             android:onClick="inflateVolumnes"
                             tools:ignore="UseSwitchCompatOrMaterialXml" />
-
                         <LinearLayout
                             android:id="@+id/lySettingsVolumesSpace"
                             android:orientation="vertical"
@@ -1163,7 +1163,6 @@
                                     android:gravity="left"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content">
-
                                     <TextView
                                         android:id="@+id/tvHardVolumen"
                                         android:layout_width="wrap_content"
@@ -1172,7 +1171,6 @@
                                         android:textColor="@color/white"
                                         android:layout_marginTop="20dp"
                                         android:layout_marginLeft="35dp"/>
-
                                     <SeekBar
                                         android:id="@+id/sbHardVolume"
                                         android:layout_width="match_parent"
@@ -1185,14 +1183,12 @@
                                         android:layout_marginLeft="20dp"
                                         android:layout_marginRight="20dp"/>
                                 </LinearLayout>
-
                                 <LinearLayout
                                     android:id="@+id/lySoftVolume"
                                     android:orientation="vertical"
                                     android:gravity="left"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content">
-
                                     <TextView
                                         android:id="@+id/tvSoftVolumen"
                                         android:layout_width="wrap_content"
@@ -1213,14 +1209,12 @@
                                         android:layout_marginLeft="20dp"
                                         android:layout_marginRight="20dp"/>
                                 </LinearLayout>
-
                                 <LinearLayout
                                     android:id="@+id/lyNotifyVolume"
                                     android:orientation="vertical"
                                     android:gravity="left"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content">
-
                                     <TextView
                                         android:id="@+id/tvNotifyVolumen"
                                         android:layout_width="wrap_content"
@@ -1253,7 +1247,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/gray_dark">
-
                         <LinearLayout
                             android:id="@+id/lyHardTrack"
                             android:orientation="vertical"
@@ -1270,7 +1263,6 @@
                                 android:progressBackgroundTint="@color/gray"
                                 android:progressTint="@color/white"
                                 android:thumbTint="@color/white"/>
-
                             <RelativeLayout
                                 android:id="@+id/relativeLayoutsbHardMusic"
                                 android:layout_width="350dp"
@@ -1297,9 +1289,9 @@
                                     android:text="@string/hard_duration"
                                     android:textColor="@color/white"
                                     android:textSize="10dp" />
+
                             </RelativeLayout>
                         </LinearLayout>
-
                         <LinearLayout
                             android:id="@+id/lySoftTrack"
                             android:orientation="vertical"
@@ -1307,7 +1299,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@color/gray_dark">
-
                             <SeekBar
                                 android:id="@+id/sbSoftTrack"
                                 android:layout_width="350dp"
@@ -1317,7 +1308,6 @@
                                 android:progressBackgroundTint="@color/gray"
                                 android:progressTint="@color/white"
                                 android:thumbTint="@color/white" />
-
                             <RelativeLayout
                                 android:id="@+id/lysbSoftMusic"
                                 android:layout_width="350dp"
@@ -1344,11 +1334,13 @@
                                     android:text="@string/soft_duration"
                                     android:textColor="@color/white"
                                     android:textSize="10dp" />
-                            </RelativeLayout>
 
+                            </RelativeLayout>
                         </LinearLayout>
                     </LinearLayout>
+
                 </LinearLayout>
+
             </LinearLayout>
         </ScrollView>
         <TextView
@@ -2149,18 +2141,19 @@
         </LinearLayout>
     </LinearLayout>
 
+
+
+
     <include
         layout="@layout/app_bar_main"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
-
-
-   <com.google.android.material.navigation.NavigationView
-       android:id="@+id/nav_view"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_gravity="start"
-       app:menu="@menu/activity_main_drawer"/>
+        android:layout_gravity="start"
+        app:menu="@menu/activity_main_drawer" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
