@@ -30,6 +30,7 @@ class LoginActivity : AppCompatActivity() {
         lateinit var providerSession: String
     }
 
+
     private var email by Delegates.notNull<String>()
     private var password by Delegates.notNull<String>()
     private lateinit var etEmail: EditText

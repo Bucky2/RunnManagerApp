@@ -10,6 +10,19 @@
     tools:context=".MainActivity"
     tools:openDrawer="start">
 
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        app:menu="@menu/activity_main_drawer" />
+
+
     <RelativeLayout
         android:id="@+id/rlMain"
         android:layout_width="match_parent"
@@ -454,7 +467,7 @@
                             android:translationY="-300dp"
                             android:gravity="left"
                             android:orientation="vertical">
-                            <!--
+
                             <fragment
                                 android:id="@+id/fragmentMap"
                                 android:name="com.google.android.gms.maps.SupportMapFragment"
@@ -468,7 +481,7 @@
                                 map:uiTiltGestures="true"
                                 map:uiZoomControls="true"
                                 map:uiZoomGestures="true"/>
-                            -->
+
 
                             <TextView
                                 android:id="@+id/tvMapCenter"
@@ -516,72 +529,64 @@
                             android:background="@color/white"
                             android:orientation="vertical" >
                         </LinearLayout>
-
                         <LinearLayout
                             android:id="@+id/lyOpenerButton"
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
-                            android:onClick="callShowHideMap"
-                            android:orientation="horizontal"
                             android:translationY="-5dp"
-                            tools:ignore="TouchTargetSizeCheck">
-
+                            android:orientation="horizontal"
+                            android:onClick="callShowHideMap">
                             <LinearLayout
                                 android:id="@+id/lyOpenStart"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
+                                android:translationY="-30dp"
                                 android:layout_marginLeft="6dp"
-                                android:background="@color/white"
-                                android:orientation="vertical"
                                 android:rotation="45"
-                                android:translationY="-30dp" />
-
+                                android:background="@color/white"
+                                android:orientation="vertical"/>
                             <LinearLayout
                                 android:id="@+id/lyOpenerTitle"
                                 android:layout_width="wrap_content"
-                                android:layout_height="22dp"
                                 android:layout_marginLeft="-25dp"
+                                android:layout_height="22dp"
                                 android:background="@color/white"
                                 android:orientation="horizontal"
                                 android:translationZ="15dp">
-
                                 <ImageView
                                     android:id="@+id/ivMapIcon"
                                     android:layout_width="12dp"
                                     android:layout_height="15dp"
                                     android:layout_marginTop="2dp"
-                                    android:src="@drawable/map_icon" />
-
+                                    android:src="@drawable/map_icon"/>
                                 <TextView
                                     android:id="@+id/tvMapTitle"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginLeft="5dp"
                                     android:gravity="center"
                                     android:text="MAPA"
+                                    android:layout_marginLeft="5dp"
                                     android:textAlignment="center"
                                     android:textColor="@color/gray_dark"
-                                    android:textSize="14sp" />
-
+                                    android:textSize="14sp"/>
                                 <ImageView
                                     android:id="@+id/ivOpenClose"
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
                                     android:layout_marginLeft="10dp"
-                                    android:rotation="0"
-                                    android:src="@drawable/opener_icon_dark" />
+                                    android:src="@drawable/opener_icon_dark"
+                                    android:rotation="0"/>
                             </LinearLayout>
-
                             <LinearLayout
                                 android:id="@+id/lyOpenEnd"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
+                                android:translationY="-30dp"
                                 android:layout_marginLeft="-30dp"
+                                android:rotation="45"
                                 android:background="@color/white"
                                 android:orientation="vertical"
-                                android:rotation="45"
-                                android:translationY="-30dp"
-                                android:translationZ="0dp" />
+                                android:translationZ="0dp"/>
 
                         </LinearLayout>
 
@@ -738,7 +743,7 @@
                             android:layout_marginRight="30dp"
                             android:layout_marginTop="40dp"
                             android:background="@color/gray_dark"
-                            android:onClick="inflateIntervalMode"
+                            android:onClick="callInflateIntervalMode"
                             tools:ignore="UseSwitchCompatOrMaterialXml" />
                         <LinearLayout
                             android:id="@+id/lyIntervalModeSpace"
@@ -1136,7 +1141,7 @@
                             android:layout_marginTop="0dp"
                             android:paddingTop="24dp"
                             android:background="@color/gray_dark"
-                            android:onClick="inflateVolumnes"
+                            android:onClick="inflateVolumes"
                             tools:ignore="UseSwitchCompatOrMaterialXml" />
                         <LinearLayout
                             android:id="@+id/lySettingsVolumesSpace"
@@ -1363,7 +1368,7 @@
 
     <LinearLayout
         android:id="@+id/lyPopupRun"
-        android:visibility="invisible"
+        android:visibility="visible"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -2143,17 +2148,5 @@
 
 
 
-
-    <include
-        layout="@layout/app_bar_main"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        app:menu="@menu/activity_main_drawer" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
